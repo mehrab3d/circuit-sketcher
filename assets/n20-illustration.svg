@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="140" viewBox="0 0 360 140">
+  <rect width="360" height="140" fill="none"/>
+  <!-- steel output shaft -->
+  <path d="M8 64h48v12H8z" fill="#aeb6bd" stroke="#68747d" stroke-width="2"/>
+  <path d="M8 64h8v12H8z" fill="#d5dbe0"/>
+  <!-- compact brass gearbox plates -->
+  <path d="M52 35h19v70H52z" fill="#d9b566" stroke="#8f6b2f" stroke-width="3"/>
+  <path d="M67 26h53v88H67z" fill="#c99a45" stroke="#805c27" stroke-width="3"/>
+  <path d="M77 34h34v72H77z" fill="#dfb965" stroke="#956e30" stroke-width="2"/>
+  <circle cx="92" cy="45" r="5" fill="#f0d99b" stroke="#8f6b2f" stroke-width="2"/>
+  <circle cx="92" cy="95" r="5" fill="#f0d99b" stroke="#8f6b2f" stroke-width="2"/>
+  <path d="M105 43h14v54h-14z" fill="#b98334" stroke="#805c27" stroke-width="2"/>
+  <!-- motor can -->
+  <rect x="115" y="34" width="163" height="72" rx="12" fill="#c7cdd1" stroke="#606a70" stroke-width="3"/>
+  <path d="M130 39h128v62H130z" fill="#d7dcdf"/>
+  <path d="M144 43v54M153 43v54" stroke="#b5bdc2" stroke-width="2"/>
+  <path d="M178 40v60M186 40v60M194 40v60" stroke="#e5e8ea" stroke-width="2" opacity=".75"/>
+  <path d="M278 40h17a9 9 0 0 1 9 9v42a9 9 0 0 1-9 9h-17z" fill="#343b42" stroke="#22282d" stroke-width="3"/>
+  <rect x="287" y="49" width="14" height="44" rx="4" fill="#252b30"/>
+  <!-- paired leads terminate at the two editable pins -->
+  <path d="M298 53h52" stroke="#30363c" stroke-width="6" stroke-linecap="round"/>
+  <path d="M298 93h52" stroke="#d9443f" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="350" cy="53" r="3" fill="#30363c"/>
+  <circle cx="350" cy="93" r="3" fill="#d9443f"/>
+</svg>
