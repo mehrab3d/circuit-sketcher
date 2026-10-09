@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Circuit Sketcher">
+  <rect width="64" height="64" rx="17" fill="#203b68"/>
+  <g fill="none" stroke="#a9dcff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 18h8a4 4 0 0 1 4 4v4"/>
+    <path d="M48 18h-8a4 4 0 0 0-4 4v4"/>
+    <path d="M16 46h8a4 4 0 0 0 4-4v-4"/>
+    <path d="M48 46h-8a4 4 0 0 1-4-4v-4"/>
+  </g>
+  <g fill="#f2c96d">
+    <circle cx="15" cy="18" r="3.5"/>
+    <circle cx="49" cy="18" r="3.5"/>
+    <circle cx="15" cy="46" r="3.5"/>
+    <circle cx="49" cy="46" r="3.5"/>
+  </g>
+  <rect x="24" y="24" width="16" height="16" rx="4" fill="#f7f9ff"/>
+  <rect x="29" y="29" width="6" height="6" rx="1.5" fill="#3268d5"/>
+</svg>

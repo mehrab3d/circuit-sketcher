@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Circuit Sketcher</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261010-dragfix">
+</head>
+<body>
+  <header class="app-header">
+    <div class="topbar">
+      <div class="brand">
+        <img class="brand-mark" src="logo.svg" alt="">
+        <span class="brand-copy"><strong>Circuit Sketcher</strong><small>WORKSPACE</small></span>
+      </div>
+      <label class="title-label" for="circuit-title">
+        <span>Project</span>
+        <input id="circuit-title" value="Untitled circuit" maxlength="80" aria-label="Circuit name">
+      </label>
+      <span id="status" role="status" aria-live="polite">Loading parts…</span>
+    </div>
+    <nav class="toolbar" aria-label="Circuit actions">
+      <div class="toolbar-group" aria-label="Edit history">
+        <button id="undo-btn" class="icon-button" type="button" aria-label="Undo" title="Undo (Ctrl+Z)" disabled><span aria-hidden="true">↶</span><span class="sr-only">Undo</span></button>
+        <button id="redo-btn" class="icon-button" type="button" aria-label="Redo" title="Redo (Ctrl+Y)" disabled><span aria-hidden="true">↷</span><span class="sr-only">Redo</span></button>
+      </div>
+      <span class="toolbar-divider" aria-hidden="true"></span>
+      <button id="save-btn" class="button button-primary" type="button"><span aria-hidden="true">✓</span> Save</button>
+      <label id="wire-color-control" class="wire-color-control" title="New wires use their pin color. Select a wire on the board to choose a different color.">
+        <span>Wire</span>
+        <input id="wire-color-input" type="color" value="#2f6fb0" aria-label="Wire color">
+      </label>
+      <div class="toolbar-spacer"></div>
+      <button id="add-note-btn" class="button" type="button"><span aria-hidden="true">▤</span> Add note</button>
+      <button id="open-btn" class="button" type="button"><span aria-hidden="true">↥</span> Open</button>
+      <input id="open-file" type="file" accept=".json,.circuit.json,application/json" hidden>
+      <button id="export-json-btn" class="button" type="button"><span aria-hidden="true">↓</span> Backup</button>
+      <button id="export-bom-btn" class="button" type="button" title="Download a CSV parts list"><span aria-hidden="true">▤</span> BOM CSV</button>
+      <button id="wiring-checks-btn" class="button wiring-checks-button" type="button" aria-haspopup="dialog" aria-controls="wiring-checks-dialog"><span aria-hidden="true">✓</span> Checks <span id="wire-check-count" class="wire-check-count">0</span></button>
+      <button id="export-png-btn" class="button" type="button"><span aria-hidden="true">▧</span> Export PNG</button>
+      <button id="clear-btn" class="button button-danger" type="button"><span aria-hidden="true">⌫</span> Clear</button>
+    </nav>
+  </header>
+
+  <main class="workspace">
+    <aside id="tray" class="parts-panel">
+      <div class="tray-heading">
+        <div class="panel-title">
+          <span class="section-eyebrow">LIBRARY</span>
+          <h2>Parts</h2>
+        </div>
+        <button id="tray-toggle" type="button" aria-expanded="true" aria-controls="tray-list" aria-label="Collapse parts panel" title="Collapse parts panel">‹</button>
+      </div>
+      <label class="search-label" for="part-search">Find a component</label>
+      <div class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="part-search" type="search" placeholder="Name, category, or ID" autocomplete="off">
+        <kbd>/</kbd>
+      </div>
+      <div id="category-filters" class="category-filters" role="group" aria-label="Filter parts by category"></div>
+      <section id="part-details" class="part-details" aria-live="polite" hidden></section>
+      <div id="tray-list" aria-live="polite"></div>
+      <div class="library-footnote"><span class="library-footnote-dot" aria-hidden="true"></span> Drag a part to the board, or click to place it</div>
+    </aside>
+
+    <section id="stage-wrap" class="board-area" aria-label="Circuit workspace">
+      <div class="board-label">
+        <span class="board-label-icon" aria-hidden="true">⌘</span>
+        <span><strong>Design board</strong><small>Arrange parts and connect pins</small></span>
+      </div>
+      <div id="stage"></div>
+      <button id="custom-part-toggle" type="button" aria-expanded="false" aria-controls="custom-part-drawer"><span aria-hidden="true">＋</span> Custom part</button>
+      <aside id="custom-part-drawer" aria-hidden="true" aria-labelledby="custom-part-heading">
+        <div class="custom-part-drawer-heading">
+          <div>
+            <span class="custom-part-kicker">PART LIBRARY</span>
+            <h2 id="custom-part-heading">Add a custom part</h2>
+            <p>Use the quick builder below, or paste a full JSON definition.</p>
+          </div>
+          <button id="custom-part-close" type="button" aria-label="Close custom part panel">×</button>
+        </div>
+        <section class="custom-part-form" aria-label="Custom part builder">
+          <div class="custom-part-builder">
+            <p class="custom-part-builder-intro">Make a simple part in a few fields. Pins are spaced along the edge you choose. Parts save with this browser's circuit.</p>
+            <label for="custom-part-name">Part name</label>
+            <input id="custom-part-name" type="text" maxlength="100" placeholder="e.g. IR sensor module">
+            <div class="custom-part-field-row">
+              <label for="custom-part-category">Category
+                <select id="custom-part-category"><option value="custom">Custom</option><option value="sensor">Sensor</option><option value="controller">Controller</option><option value="driver">Driver</option><option value="actuator">Actuator</option><option value="power">Power</option><option value="passive">Passive</option><option value="output">Output</option></select>
+              </label>
+              <label for="custom-part-shape">Shape
+                <select id="custom-part-shape"><option value="rounded">Rounded</option><option value="rectangle">Rectangle</option><option value="circle">Round</option></select>
+              </label>
+            </div>
+            <div class="custom-part-field-row custom-part-size-row">
+              <label for="custom-part-width">Width <span>px</span><input id="custom-part-width" type="number" min="64" max="500" value="160"></label>
+              <label for="custom-part-height">Height <span>px</span><input id="custom-part-height" type="number" min="64" max="500" value="110"></label>
+              <label for="custom-part-color">Color <input id="custom-part-color" type="color" value="#2877b9"></label>
+            </div>
+            <label for="custom-part-pin-labels">Pin labels <span>separate with commas</span></label>
+            <input id="custom-part-pin-labels" type="text" value="VCC, GND, OUT" placeholder="VCC, GND, OUT">
+            <div class="custom-part-field-row">
+              <label for="custom-part-pin-side">Pin side
+                <select id="custom-part-pin-side"><option value="bottom">Bottom</option><option value="top">Top</option><option value="left">Left</option><option value="right">Right</option></select>
+              </label>
+              <label for="custom-part-pin-type">Pin type
+                <select id="custom-part-pin-type"><option value="signal">Signal</option><option value="power">Power</option><option value="ground">Ground</option><option value="data">Data</option><option value="other">Other</option></select>
+              </label>
+            </div>
+            <div class="custom-part-preview-wrap"><svg id="custom-part-preview" role="img" aria-label="Part preview" viewBox="0 0 160 110"><path id="custom-part-preview-body"></path><g id="custom-part-preview-pins"></g></svg><span>Live preview</span></div>
+            <button id="custom-part-create" type="button"><span aria-hidden="true">＋</span> Create part</button>
+          </div>
+          <details class="custom-part-advanced">
+            <summary>I already have part JSON</summary>
+            <label for="custom-part-json">Paste one part definition <span>JSON</span></label>
+            <textarea id="custom-part-json" rows="8" spellcheck="false" placeholder='{"id":"led-basic","name":"LED","category":"output","size":{"width":60,"height":80},"visual":{"type":"path","d":"M10 10H50V55H10Z","fill":"#f0c419","stroke":"#6b5b00","strokeWidth":2},"pins":[{"id":"anode","label":"A","x":10,"y":55,"side":"left","type":"power"},{"id":"cathode","label":"K","x":50,"y":55,"side":"right","type":"ground"}]}'></textarea>
+            <button id="add-custom-part-btn" type="button"><span aria-hidden="true">＋</span> Add JSON part</button>
+          </details>
+          <span id="custom-part-status" role="status" aria-live="polite"></span>
+        </section>
+      </aside>
+      <div class="view-controls" aria-label="Canvas view controls">
+        <button id="zoom-out-btn" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+        <output id="zoom-level" aria-live="polite">100%</output>
+        <button id="zoom-in-btn" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+        <span class="view-controls-divider" aria-hidden="true"></span>
+        <button id="reset-view-btn" type="button" title="Reset zoom and pan">Reset view</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="remove-part-dialog" aria-labelledby="remove-part-title">
+    <div class="remove-part-content">
+      <div class="remove-part-icon" aria-hidden="true">!</div>
+      <div><span class="remove-part-kicker">PART LIBRARY</span><h2 id="remove-part-title">Remove this part?</h2><p id="remove-part-message"></p></div>
+    </div>
+    <div class="remove-part-actions"><button id="remove-part-cancel" type="button">Keep part</button><button id="remove-part-confirm" type="button">Remove from list</button></div>
+  </dialog>
+
+  <dialog id="resistor-dialog" aria-labelledby="resistor-dialog-title">
+    <form id="resistor-form">
+      <div class="note-dialog-heading">
+        <div><span class="note-dialog-kicker">RESISTOR VALUE</span><h2 id="resistor-dialog-title">Set resistance</h2><p id="resistor-summary">Color code for 220 Ω · gold tolerance band ±5%</p></div>
+        <button id="resistor-cancel" class="note-close-btn" type="button" aria-label="Close dialog" title="Close">×</button>
+      </div>
+      <label for="resistor-value">Resistance</label>
+      <input id="resistor-value" type="text" inputmode="decimal" value="220" placeholder="220, 4.7k, or 1M" required>
+      <div id="resistor-band-preview" class="resistor-band-preview" aria-label="Resistor color bands"></div>
+      <div class="note-dialog-actions"><button class="note-cancel-btn" id="resistor-cancel-bottom" type="button">Cancel</button><button class="note-submit-btn" type="submit">Apply value</button></div>
+    </form>
+  </dialog>
+  <dialog id="note-dialog" aria-labelledby="note-dialog-title">
+    <form id="note-form">
+      <div class="note-dialog-heading">
+        <div><span class="note-dialog-kicker">WORKSPACE NOTE</span><h2 id="note-dialog-title">Add a note</h2><p id="note-dialog-help">Add a reminder or detail to your circuit.</p></div>
+        <button id="note-close-btn" class="note-close-btn" type="button" aria-label="Close dialog" title="Close">×</button>
+      </div>
+      <label for="note-content">Note</label>
+      <textarea id="note-content" rows="5" maxlength="1000" placeholder="Write a note…" required></textarea>
+      <div class="note-dialog-footer">
+        <span class="note-dialog-tip">You can move the note around the board.</span>
+        <div class="note-dialog-actions"><button id="note-cancel-btn" class="note-cancel-btn" type="button">Cancel</button><button id="note-submit-btn" class="note-submit-btn" type="submit">Add note</button></div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="clear-workspace-dialog" aria-labelledby="clear-workspace-title">
+    <div class="clear-workspace-heading"><div class="clear-workspace-icon" aria-hidden="true">!</div><div><span class="clear-workspace-kicker">CLEAR WORKSPACE</span><h2 id="clear-workspace-title">Start with a clean board?</h2></div></div>
+    <p class="clear-workspace-message">This removes all placed parts, wires, and notes from the board. You can use Undo to restore them.</p>
+    <div class="clear-workspace-actions"><button id="clear-workspace-cancel" type="button">Cancel</button><button id="clear-workspace-confirm" type="button">Clear workspace</button></div>
+  </dialog>
+
+  <dialog id="wiring-checks-dialog" aria-labelledby="wiring-checks-title">
+    <div class="clear-workspace-heading"><div class="wire-checks-icon" aria-hidden="true">✓</div><div><span class="clear-workspace-kicker">CIRCUIT REVIEW</span><h2 id="wiring-checks-title">Wiring checks</h2></div></div>
+    <p id="wiring-checks-summary" class="clear-workspace-message">No known voltage conflicts found.</p>
+    <ul id="wiring-checks-list" class="wiring-checks-list" hidden></ul>
+    <div class="clear-workspace-actions"><button id="wiring-checks-close" type="button">Done</button></div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/konva@9/konva.min.js"></script>
+  <script src="app.js?v=20261010-custombuilder"></script>
+  <script src="wires.js"></script>
+</body>
+</html>
+
+

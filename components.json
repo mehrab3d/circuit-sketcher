@@ -1,0 +1,1907 @@
+{
+  "components": [
+    {
+      "id": "hc-sr04",
+      "name": "HC-SR04 Ultrasonic Sensor",
+      "category": "sensor",
+      "size": {
+        "height": 142,
+        "width": 230
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22230%22%20height%3D%22142%22%20viewBox%3D%220%200%20230%20142%22%3E%0A%3Cdefs%3E%3CradialGradient%20id%3D%22metal%22%3E%3Cstop%20stop-color%3D%22%23f5f5f2%22%2F%3E%3Cstop%20offset%3D%22.72%22%20stop-color%3D%22%23aeb6bb%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2356626b%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%0A%3Crect%20x%3D%228%22%20y%3D%227%22%20width%3D%22214%22%20height%3D%22112%22%20rx%3D%225%22%20fill%3D%22%231769a2%22%20stroke%3D%22%230a3e66%22%20stroke-width%3D%222%22%2F%3E%0A%3Cg%20fill%3D%22%23d8dce0%22%20stroke%3D%22%23f4f4f1%22%20stroke-width%3D%224%22%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2219%22%20r%3D%227%22%2F%3E%3Ccircle%20cx%3D%22210%22%20cy%3D%2219%22%20r%3D%227%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22107%22%20r%3D%227%22%2F%3E%3Ccircle%20cx%3D%22210%22%20cy%3D%22107%22%20r%3D%227%22%2F%3E%3C%2Fg%3E%0A%3Cg%3E%3Ccircle%20cx%3D%2263%22%20cy%3D%2263%22%20r%3D%2239%22%20fill%3D%22%23dce2e6%22%2F%3E%3Ccircle%20cx%3D%2263%22%20cy%3D%2263%22%20r%3D%2234%22%20fill%3D%22%23343b40%22%2F%3E%3Ccircle%20cx%3D%2263%22%20cy%3D%2263%22%20r%3D%2228%22%20fill%3D%22%23687176%22%2F%3E%3Ccircle%20cx%3D%2263%22%20cy%3D%2263%22%20r%3D%2221%22%20fill%3D%22%239ca4a8%22%2F%3E%3Ccircle%20cx%3D%2263%22%20cy%3D%2263%22%20r%3D%2214%22%20fill%3D%22%23c9ced0%22%20stroke%3D%22%237b858a%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%22167%22%20cy%3D%2263%22%20r%3D%2239%22%20fill%3D%22%23dce2e6%22%2F%3E%3Ccircle%20cx%3D%22167%22%20cy%3D%2263%22%20r%3D%2234%22%20fill%3D%22%23343b40%22%2F%3E%3Ccircle%20cx%3D%22167%22%20cy%3D%2263%22%20r%3D%2228%22%20fill%3D%22%23687176%22%2F%3E%3Ccircle%20cx%3D%22167%22%20cy%3D%2263%22%20r%3D%2221%22%20fill%3D%22%239ca4a8%22%2F%3E%3Ccircle%20cx%3D%22167%22%20cy%3D%2263%22%20r%3D%2214%22%20fill%3D%22%23c9ced0%22%20stroke%3D%22%237b858a%22%20stroke-width%3D%222%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2296%22%20y%3D%2215%22%20width%3D%2238%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23d9dfe1%22%20stroke%3D%22%23aab4b8%22%20stroke-width%3D%222%22%2F%3E%0A%3Ctext%20x%3D%22115%22%20y%3D%22101%22%20text-anchor%3D%22middle%22%20fill%3D%22%23eef7fb%22%20font-size%3D%228%22%20font-family%3D%22Arial%2Csans-serif%22%20letter-spacing%3D%221%22%3EHC-SR04%3C%2Ftext%3E%0A%3Cg%20fill%3D%22%23aeb5b8%22%20stroke%3D%22%23687177%22%20stroke-width%3D%221%22%3E%3Crect%20x%3D%2280%22%20y%3D%22112%22%20width%3D%2212%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%22112%22%20width%3D%2212%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22118%22%20y%3D%22112%22%20width%3D%2212%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22137%22%20y%3D%22112%22%20width%3D%2212%22%20height%3D%2210%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23bfc3c4%22%3E%3Crect%20x%3D%2283%22%20y%3D%22120%22%20width%3D%226%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%22102%22%20y%3D%22120%22%20width%3D%226%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%22121%22%20y%3D%22120%22%20width%3D%226%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%22140%22%20y%3D%22120%22%20width%3D%226%22%20height%3D%2222%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E"
+      },
+      "pins": [
+        {
+          "label": "VCC",
+          "y": 131,
+          "x": 86,
+          "side": "bottom",
+          "type": "power",
+          "id": "vcc"
+        },
+        {
+          "label": "Trig",
+          "y": 131,
+          "x": 105,
+          "side": "bottom",
+          "type": "signal",
+          "id": "trig"
+        },
+        {
+          "label": "Echo",
+          "y": 131,
+          "x": 124,
+          "side": "bottom",
+          "type": "signal",
+          "id": "echo",
+          "maxOutputVoltage": 5
+        },
+        {
+          "label": "GND",
+          "y": 131,
+          "x": 143,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd"
+        }
+      ],
+      "info": [
+        "Power VCC from 5 V and connect GND to the controller ground.",
+        "ECHO can output a 5 V signal. Use a level shifter or voltage divider with 3.3 V-only controller inputs.",
+        "Send a short trigger pulse to Trig, then measure how long Echo stays high to calculate distance."
+      ]
+    },
+    {
+      "id": "pca9685",
+      "name": "PCA9685 16-Channel Servo Driver",
+      "category": "driver",
+      "size": {
+        "height": 204,
+        "width": 340
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22340%22%20height%3D%22204%22%20viewBox%3D%220%200%20340%20204%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22pcb%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23087bb5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23075f91%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22green%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%2383c772%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23468b49%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%0A%3Crect%20x%3D%2240%22%20y%3D%2235%22%20width%3D%22260%22%20height%3D%22122%22%20rx%3D%2210%22%20fill%3D%22url%28%23pcb%29%22%20stroke%3D%22%23064a73%22%20stroke-width%3D%222%22%2F%3E%0A%3Cg%20fill%3D%22%23eff4f5%22%20stroke%3D%22%239aa8af%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2247%22%20r%3D%227%22%2F%3E%3Ccircle%20cx%3D%22288%22%20cy%3D%2247%22%20r%3D%227%22%2F%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%22145%22%20r%3D%227%22%2F%3E%3Ccircle%20cx%3D%22288%22%20cy%3D%22145%22%20r%3D%227%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%22138%22%20y%3D%2227%22%20width%3D%2262%22%20height%3D%2227%22%20rx%3D%223%22%20fill%3D%22url%28%23green%29%22%20stroke%3D%22%23377849%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%22154%22%20cy%3D%2240%22%20r%3D%228%22%20fill%3D%22%23c5d0c9%22%20stroke%3D%22%23788982%22%2F%3E%3Ccircle%20cx%3D%22184%22%20cy%3D%2240%22%20r%3D%228%22%20fill%3D%22%23c5d0c9%22%20stroke%3D%22%23788982%22%2F%3E%0A%3Cg%20fill%3D%22%23dce5e8%22%20stroke%3D%22%237c8a91%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%22154%22%20cy%3D%2240%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22184%22%20cy%3D%2240%22%20r%3D%223%22%2F%3E%3C%2Fg%3E%0A%3Crect%20x%3D%2274%22%20y%3D%2254%22%20width%3D%2229%22%20height%3D%2232%22%20rx%3D%222%22%20fill%3D%22%23d7e3e7%22%20stroke%3D%22%2365757d%22%2F%3E%3Ccircle%20cx%3D%2288.5%22%20cy%3D%2270%22%20r%3D%2211%22%20fill%3D%22%238c999d%22%20stroke%3D%22%2359676d%22%2F%3E%3Cpath%20d%3D%22M78%2070h21M88.5%2060v20%22%20stroke%3D%22%2359676d%22%2F%3E%0A%3Crect%20x%3D%22126%22%20y%3D%2263%22%20width%3D%2234%22%20height%3D%2247%22%20rx%3D%222%22%20fill%3D%22%23202a31%22%20stroke%3D%22%2369747a%22%2F%3E%3Cg%20stroke%3D%22%23c8b98c%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M131%2063v-5m7%205v-5m7%205v-5m7%205v-5m-21%2052v5m7-5v5m7-5v5m7-5v5%22%2F%3E%3C%2Fg%3E%0A%3Ctext%20x%3D%22143%22%20y%3D%22121%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f4f7f6%22%20font-size%3D%228%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%3EPCA9685%3C%2Ftext%3E%3Ctext%20x%3D%22143%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20fill%3D%22%23d6e9f0%22%20font-size%3D%226%22%20font-family%3D%22Arial%2Csans-serif%22%3E16-CHANNEL%20PWM%3C%2Ftext%3E%0A%3Crect%20x%3D%22210%22%20y%3D%2255%22%20width%3D%2267%22%20height%3D%2233%22%20rx%3D%222%22%20fill%3D%22%23193a50%22%20stroke%3D%22%239fc6d3%22%2F%3E%3Ctext%20x%3D%22243%22%20y%3D%2266%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e5f3f6%22%20font-size%3D%226%22%20font-family%3D%22Arial%2Csans-serif%22%3EI2C%20ADDRESS%3C%2Ftext%3E%3Cg%20fill%3D%22%23a7d6ed%22%20stroke%3D%22%23d7eff8%22%3E%3Crect%20x%3D%22215%22%20y%3D%2272%22%20width%3D%228%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22226%22%20y%3D%2272%22%20width%3D%228%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22237%22%20y%3D%2272%22%20width%3D%228%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22248%22%20y%3D%2272%22%20width%3D%228%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22259%22%20y%3D%2272%22%20width%3D%228%22%20height%3D%2210%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23e8f0f3%22%20stroke%3D%22%234a5960%22%3E%3Crect%20x%3D%2275%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%2286%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%2297%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%22119%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%22130%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%22141%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3Crect%20x%3D%22152%22%20y%3D%2292%22%20width%3D%228%22%20height%3D%229%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23202c35%22%20stroke%3D%22%23b6c2c7%22%20stroke-width%3D%221%22%3E%3Crect%20x%3D%2245%22%20y%3D%2241%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%22276%22%20y%3D%2241%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%2258%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%22276%22%20y%3D%2258%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%2275%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%22276%22%20y%3D%2275%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%2292%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%22276%22%20y%3D%2292%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%22109%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%22276%22%20y%3D%22109%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%22126%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3Crect%20x%3D%22276%22%20y%3D%22126%22%20width%3D%2219%22%20height%3D%2214%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23111c25%22%20stroke%3D%22%23f2dc79%22%20stroke-width%3D%221%22%3E%3Crect%20x%3D%2248%22%20y%3D%2243%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22279%22%20y%3D%2243%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2260%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22279%22%20y%3D%2260%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2277%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22279%22%20y%3D%2277%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2294%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22279%22%20y%3D%2294%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%22111%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22279%22%20y%3D%22111%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%22128%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%22279%22%20y%3D%22128%22%20width%3D%2213%22%20height%3D%2210%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23e6f0f2%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%226%22%3E%3Ctext%20x%3D%2268%22%20y%3D%2250%22%3EGND%3C%2Ftext%3E%3Ctext%20x%3D%22211%22%20y%3D%2250%22%3EGND%3C%2Ftext%3E%3Ctext%20x%3D%2268%22%20y%3D%2267%22%3EOE%3C%2Ftext%3E%3Ctext%20x%3D%22211%22%20y%3D%2267%22%3EOE%3C%2Ftext%3E%3Ctext%20x%3D%2268%22%20y%3D%2284%22%3ESCL%3C%2Ftext%3E%3Ctext%20x%3D%22211%22%20y%3D%2284%22%3ESCL%3C%2Ftext%3E%3Ctext%20x%3D%2268%22%20y%3D%22101%22%3ESDA%3C%2Ftext%3E%3Ctext%20x%3D%22211%22%20y%3D%22101%22%3ESDA%3C%2Ftext%3E%3Ctext%20x%3D%2268%22%20y%3D%22118%22%3EVCC%3C%2Ftext%3E%3Ctext%20x%3D%22211%22%20y%3D%22118%22%3EVCC%3C%2Ftext%3E%3Ctext%20x%3D%2268%22%20y%3D%22135%22%3EV%2B%3C%2Ftext%3E%3Ctext%20x%3D%22211%22%20y%3D%22135%22%3EV%2B%3C%2Ftext%3E%3C%2Fg%3E%3Ctext%20x%3D%2278%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E0%3C%2Ftext%3E%3Crect%20x%3D%2274.6%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%2274.6%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%2274.6%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%2290.2%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E1%3C%2Ftext%3E%3Crect%20x%3D%2286.8%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%2286.8%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%2286.8%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22102.4%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E2%3C%2Ftext%3E%3Crect%20x%3D%2299%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22114.6%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E3%3C%2Ftext%3E%3Crect%20x%3D%22111.2%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22111.2%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22111.2%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22126.8%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E4%3C%2Ftext%3E%3Crect%20x%3D%22123.4%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22123.4%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22123.4%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22139%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E5%3C%2Ftext%3E%3Crect%20x%3D%22135.6%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22135.6%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22135.6%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22151.2%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E6%3C%2Ftext%3E%3Crect%20x%3D%22147.8%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22147.8%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22147.8%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22163.4%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E7%3C%2Ftext%3E%3Crect%20x%3D%22160%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22160%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22160%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22175.6%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E8%3C%2Ftext%3E%3Crect%20x%3D%22172.2%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22172.2%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22172.2%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22187.8%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E9%3C%2Ftext%3E%3Crect%20x%3D%22184.4%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22184.4%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22184.4%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E10%3C%2Ftext%3E%3Crect%20x%3D%22196.6%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22196.6%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22196.6%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22212.2%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E11%3C%2Ftext%3E%3Crect%20x%3D%22208.8%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22208.8%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22208.8%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22224.4%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E12%3C%2Ftext%3E%3Crect%20x%3D%22221%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22221%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22221%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22236.6%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E13%3C%2Ftext%3E%3Crect%20x%3D%22233.2%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22233.2%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22233.2%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22248.8%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E14%3C%2Ftext%3E%3Crect%20x%3D%22245.4%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22245.4%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22245.4%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3Ctext%20x%3D%22261%22%20y%3D%22151%22%20text-anchor%3D%22middle%22%20fill%3D%22%23edf4f4%22%20font-size%3D%225%22%20font-family%3D%22Arial%2Csans-serif%22%3E15%3C%2Ftext%3E%3Crect%20x%3D%22257.6%22%20y%3D%22158%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23f6df64%22%20stroke%3D%22%23c0a833%22%2F%3E%3Crect%20x%3D%22257.6%22%20y%3D%22170%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%23e8444b%22%20stroke%3D%22%23a72d34%22%2F%3E%3Crect%20x%3D%22257.6%22%20y%3D%22182%22%20width%3D%226.8%22%20height%3D%229%22%20rx%3D%222%22%20fill%3D%22%2326333d%22%20stroke%3D%22%23111a21%22%2F%3E%3C%2Fsvg%3E"
+      },
+      "pins": [
+        {
+          "label": "GND",
+          "y": 48,
+          "x": 30,
+          "side": "left",
+          "type": "ground",
+          "id": "gnd"
+        },
+        {
+          "label": "GND",
+          "y": 48,
+          "x": 310,
+          "side": "right",
+          "type": "ground",
+          "id": "right-gnd"
+        },
+        {
+          "label": "OE",
+          "y": 65,
+          "x": 30,
+          "side": "left",
+          "type": "signal",
+          "id": "oe"
+        },
+        {
+          "label": "OE",
+          "y": 65,
+          "x": 310,
+          "side": "right",
+          "type": "signal",
+          "id": "right-oe"
+        },
+        {
+          "label": "SCL",
+          "y": 82,
+          "x": 30,
+          "side": "left",
+          "type": "data",
+          "id": "scl"
+        },
+        {
+          "label": "SCL",
+          "y": 82,
+          "x": 310,
+          "side": "right",
+          "type": "data",
+          "id": "right-scl"
+        },
+        {
+          "label": "SDA",
+          "y": 99,
+          "x": 30,
+          "side": "left",
+          "type": "data",
+          "id": "sda"
+        },
+        {
+          "label": "SDA",
+          "y": 99,
+          "x": 310,
+          "side": "right",
+          "type": "data",
+          "id": "right-sda"
+        },
+        {
+          "label": "VCC",
+          "y": 116,
+          "x": 30,
+          "side": "left",
+          "type": "power",
+          "id": "vcc"
+        },
+        {
+          "label": "VCC",
+          "y": 116,
+          "x": 310,
+          "side": "right",
+          "type": "power",
+          "id": "right-vcc"
+        },
+        {
+          "label": "V+",
+          "y": 133,
+          "x": 30,
+          "side": "left",
+          "type": "power",
+          "id": "vplus"
+        },
+        {
+          "label": "V+",
+          "y": 133,
+          "x": 310,
+          "side": "right",
+          "type": "power",
+          "id": "right-vplus"
+        },
+        {
+          "label": "V+",
+          "y": 24,
+          "x": 154,
+          "side": "top",
+          "type": "power",
+          "id": "top-vplus"
+        },
+        {
+          "label": "GND",
+          "y": 24,
+          "x": 184,
+          "side": "top",
+          "type": "ground",
+          "id": "top-gnd"
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 78.0,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm0",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 78.0,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus0",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 78.0,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd0",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 90.2,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm1",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 90.2,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus1",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 90.2,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd1",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 102.4,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm2",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 102.4,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus2",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 102.4,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd2",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 114.6,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm3",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 114.6,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus3",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 114.6,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd3",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 126.8,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm4",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 126.8,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus4",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 126.8,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd4",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 139.0,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm5",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 139.0,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus5",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 139.0,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd5",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 151.2,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm6",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 151.2,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus6",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 151.2,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd6",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 163.4,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm7",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 163.4,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus7",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 163.4,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd7",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 175.6,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm8",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 175.6,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus8",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 175.6,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd8",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 187.8,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm9",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 187.8,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus9",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 187.8,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd9",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 200.0,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm10",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 200.0,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus10",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 200.0,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd10",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 212.2,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm11",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 212.2,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus11",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 212.2,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd11",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 224.4,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm12",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 224.4,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus12",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 224.4,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd12",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 236.6,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm13",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 236.6,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus13",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 236.6,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd13",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 248.8,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm14",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 248.8,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus14",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 248.8,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd14",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 162,
+          "x": 261.0,
+          "side": "bottom",
+          "type": "signal",
+          "id": "pwm15",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 174,
+          "x": 261.0,
+          "side": "bottom",
+          "type": "power",
+          "id": "vplus15",
+          "hitStrokeWidth": 6
+        },
+        {
+          "label": false,
+          "y": 186,
+          "x": 261.0,
+          "side": "bottom",
+          "type": "ground",
+          "id": "gnd15",
+          "hitStrokeWidth": 6
+        }
+      ],
+      "info": [
+        "V+ powers the servo rail. Use an external supply matched to your servos (commonly 5–6 V); 6 V is not right for every servo.",
+        "VCC powers the driver logic. Keep it at the controller logic voltage (typically 3.3 V or 5 V). Do not confuse VCC with V+.",
+        "Connect the external supply ground to PCA9685 GND and the controller ground so all grounds are common.",
+        "The PCA9685 communicates with the controller over I²C."
+      ]
+    },
+    {
+      "id": "esp32-s3-devkitc-1",
+      "name": "ESP32-S3-DevKitC-1",
+      "category": "controller",
+      "size": {
+        "width": 360,
+        "height": 680
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iNjgwIiB2aWV3Qm94PSIwIDAgMzYwIDY4MCI+CiAgPHJlY3QgeD0iNDMiIHk9IjI4IiB3aWR0aD0iMjc0IiBoZWlnaHQ9IjYyMCIgcng9IjEzIiBmaWxsPSIjMjAyYTMyIiBzdHJva2U9IiMxMTE5MWYiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxwYXRoIGQ9Ik01NSA0NGgyNTBNNTUgNjMwaDI1MCIgc3Ryb2tlPSIjMzU0MjRhIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8cmVjdCB4PSIxMTIiIHk9IjEzIiB3aWR0aD0iMTM2IiBoZWlnaHQ9IjQ4IiByeD0iNSIgZmlsbD0iIzE0MWExZiIgc3Ryb2tlPSIjMzk0MzRhIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTE5IDE5aDEyMnYzNkgxMTl6IiBmaWxsPSIjMWIyMzI5Ii8+CiAgPHJlY3QgeD0iMTA2IiB5PSI2MyIgd2lkdGg9IjE0OCIgaGVpZ2h0PSIxNTEiIHJ4PSI1IiBmaWxsPSIjOTI5OTlkIiBzdHJva2U9IiNkNGQ3ZDYiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxyZWN0IHg9IjExMiIgeT0iNjkiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM5IiByeD0iMyIgZmlsbD0iIzg1OGQ5MSIvPgogIDxwYXRoIGQ9Ik0xMTggNzVoMTI0djEyN0gxMTh6IiBmaWxsPSIjOTA5NzlhIi8+CiAgPHRleHQgeD0iMTgwIiB5PSIxMDEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNlOWViZWEiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNzAwIj5FU1BSRVNTSUY8L3RleHQ+CiAgPHRleHQgeD0iMTgwIiB5PSIxMTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNkOWRkZGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiPkVTUDMyLVMzLVdST09NLTE8L3RleHQ+CiAgPHRleHQgeD0iMTgwIiB5PSIxODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNkY2UwZGYiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiPkZDQyAgQ0U8L3RleHQ+CiAgPHJlY3QgeD0iMTIzIiB5PSIyMjkiIHdpZHRoPSIxMTQiIGhlaWdodD0iNDMiIHJ4PSIzIiBmaWxsPSIjMTgyMTI3IiBzdHJva2U9IiM0OTU1NWIiLz4KICA8ZyBmaWxsPSIjOGU5ODljIj48cmVjdCB4PSIxMjkiIHk9IjIzNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjgiIHJ4PSIxIi8+PHJlY3QgeD0iMTUzIiB5PSIyMzUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiByeD0iMSIvPjxyZWN0IHg9IjE3NyIgeT0iMjM1IiB3aWR0aD0iMjAiIGhlaWdodD0iOCIgcng9IjEiLz48cmVjdCB4PSIyMDEiIHk9IjIzNSIgd2lkdGg9IjI5IiBoZWlnaHQ9IjgiIHJ4PSIxIi8+PHJlY3QgeD0iMTI5IiB5PSIyNTAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiLz48cmVjdCB4PSIxNDgiIHk9IjI1MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiByeD0iMSIvPjxyZWN0IHg9IjE2NyIgeT0iMjUwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHJ4PSIxIi8+PHJlY3QgeD0iMTg2IiB5PSIyNTAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiLz48cmVjdCB4PSIyMDUiIHk9IjI1MCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjE0IiByeD0iMSIvPjwvZz4KICA8dGV4dCB4PSIxODAiIHk9IjI5NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2I3YzJjNSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgbGV0dGVyLXNwYWNpbmc9IjEiPkVTUDMyLVMzICBERVZLSVRDLTE8L3RleHQ+CiAgPGcgZmlsbD0iIzRjNTk2MCIgc3Ryb2tlPSIjNjk3NjdjIiBzdHJva2Utd2lkdGg9IjEiPgogICAgPHJlY3QgeD0iODkiIHk9IjMxOCIgd2lkdGg9IjI3IiBoZWlnaHQ9IjIzIiByeD0iMiIvPjxyZWN0IHg9IjEyMyIgeT0iMzE4IiB3aWR0aD0iMTYiIGhlaWdodD0iMjMiIHJ4PSIyIi8+PHJlY3QgeD0iMTQ0IiB5PSIzMTgiIHdpZHRoPSIzMSIgaGVpZ2h0PSIyMyIgcng9IjIiLz48cmVjdCB4PSIxODIiIHk9IjMxOCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIzIiByeD0iMiIvPjxyZWN0IHg9IjIwNyIgeT0iMzE4IiB3aWR0aD0iMjgiIGhlaWdodD0iMjMiIHJ4PSIyIi8+CiAgICA8cmVjdCB4PSI4MyIgeT0iMzUwIiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIyIi8+PHJlY3QgeD0iMTA1IiB5PSIzNTAiIHdpZHRoPSIyNyIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cmVjdCB4PSIxMzgiIHk9IjM1MCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE0IiByeD0iMiIvPjxyZWN0IHg9IjE2MCIgeT0iMzUwIiB3aWR0aD0iMjciIGhlaWdodD0iMTQiIHJ4PSIyIi8+PHJlY3QgeD0iMTkzIiB5PSIzNTAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cmVjdCB4PSIyMTUiIHk9IjM1MCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjE0IiByeD0iMiIvPgogICAgPHJlY3QgeD0iMTAyIiB5PSIzNzkiIHdpZHRoPSIzOCIgaGVpZ2h0PSIyMSIgcng9IjIiLz48cmVjdCB4PSIxNDgiIHk9IjM3OSIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIxIiByeD0iMiIvPjxyZWN0IHg9IjE3NCIgeT0iMzc5IiB3aWR0aD0iMzQiIGhlaWdodD0iMjEiIHJ4PSIyIi8+PHJlY3QgeD0iMjE2IiB5PSIzNzkiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyMSIgcng9IjIiLz4KICA8L2c+CiAgPHJlY3QgeD0iMTcyIiB5PSI0MTQiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgcng9IjQiIGZpbGw9IiNlN2U5ZTciIHN0cm9rZT0iI2FhYjFiMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iNDIyIiByPSI0IiBmaWxsPSIjMzViZmExIi8+CiAgPHRleHQgeD0iMTgwIiB5PSI0NDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhYWI2YmEiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiPlJHQiBMRUQgLSBHUElPNDg8L3RleHQ+CiAgPGcgZmlsbD0iIzE3MWYyNCIgc3Ryb2tlPSIjNTg2NTZiIiBzdHJva2Utd2lkdGg9IjEiPjxyZWN0IHg9IjEyMSIgeT0iNDcyIiB3aWR0aD0iNDAiIGhlaWdodD0iMjkiIHJ4PSIzIi8+PHJlY3QgeD0iMTk5IiB5PSI0NzIiIHdpZHRoPSI0MCIgaGVpZ2h0PSIyOSIgcng9IjMiLz48L2c+CiAgPGNpcmNsZSBjeD0iMTQxIiBjeT0iNDg2LjUiIHI9IjgiIGZpbGw9IiM3MzdkODEiIHN0cm9rZT0iI2FmYjdiOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMjE5IiBjeT0iNDg2LjUiIHI9IjgiIGZpbGw9IiM3MzdkODEiIHN0cm9rZT0iI2FmYjdiOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iMTQxIiB5PSI1MTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhYWI2YmEiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjciPkJPT1Q8L3RleHQ+CiAgPHRleHQgeD0iMjE5IiB5PSI1MTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhYWI2YmEiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjciPlJFU0VUPC90ZXh0PgogIDxnIGZpbGw9IiM2NjcyNzkiPjxyZWN0IHg9Ijk5IiB5PSI1MzUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIzMyIgcng9IjIiLz48cmVjdCB4PSIxMjMiIHk9IjUzNSIgd2lkdGg9IjE1IiBoZWlnaHQ9IjMzIiByeD0iMiIvPjxyZWN0IHg9IjE0NyIgeT0iNTM1IiB3aWR0aD0iMTUiIGhlaWdodD0iMzMiIHJ4PSIyIi8+PHJlY3QgeD0iMTcxIiB5PSI1MzUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIzMyIgcng9IjIiLz48cmVjdCB4PSIxOTUiIHk9IjUzNSIgd2lkdGg9IjE1IiBoZWlnaHQ9IjMzIiByeD0iMiIvPjxyZWN0IHg9IjIxOSIgeT0iNTM1IiB3aWR0aD0iMTUiIGhlaWdodD0iMzMiIHJ4PSIyIi8+PHJlY3QgeD0iMjQzIiB5PSI1MzUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIzMyIgcng9IjIiLz48L2c+CiAgPGcgZmlsbD0iIzExMWEyMCI+PHJlY3QgeD0iMTA1IiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMTI5IiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMTUzIiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMTc3IiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMjAxIiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMjI1IiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMjQ5IiB5PSI1NDEiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIi8+PC9nPgogIDxnIGZpbGw9IiMzMDNiNDIiIHN0cm9rZT0iIzljYTVhOCIgc3Ryb2tlLXdpZHRoPSIyIj48cmVjdCB4PSI5MSIgeT0iNjE5IiB3aWR0aD0iNjQiIGhlaWdodD0iNTMiIHJ4PSI1Ii8+PHJlY3QgeD0iMjA1IiB5PSI2MTkiIHdpZHRoPSI2NCIgaGVpZ2h0PSI1MyIgcng9IjUiLz48L2c+CiAgPGcgZmlsbD0iI2E5YjBiMSI+PHJlY3QgeD0iMTAxIiB5PSI2MjgiIHdpZHRoPSI0NCIgaGVpZ2h0PSIzMiIgcng9IjMiLz48cmVjdCB4PSIyMTUiIHk9IjYyOCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjMyIiByeD0iMyIvPjwvZz4KICA8ZyBmaWxsPSIjMjAyYTMyIj48cmVjdCB4PSIxMDgiIHk9IjYzNCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjE5IiByeD0iMyIvPjxyZWN0IHg9IjIyMiIgeT0iNjM0IiB3aWR0aD0iMzAiIGhlaWdodD0iMTkiIHJ4PSIzIi8+PC9nPgogIDxjaXJjbGUgY3g9IjUyIiBjeT0iMTA2IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIxMDYiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjEwNiIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjEwNiIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIxMjYuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMTI2LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjEyNi41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMTI2LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMTQ3IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIxNDciIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjE0NyIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjE0NyIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIxNjcuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMTY3LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjE2Ny41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMTY3LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMTg4IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIxODgiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjE4OCIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjE4OCIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIyMDguNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMjA4LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjIwOC41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMjA4LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMjI5IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIyMjkiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjIyOSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjIyOSIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIyNDkuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMjQ5LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjI0OS41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMjQ5LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMjcwIiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIyNzAiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjI3MCIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjI3MCIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIyOTAuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMjkwLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjI5MC41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMjkwLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMzExIiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIzMTEiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjMxMSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjMxMSIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIzMzEuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMzMxLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjMzMS41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMzMxLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMzUyIiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIzNTIiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjM1MiIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjM1MiIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSIzNzIuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iMzcyLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjM3Mi41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iMzcyLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iMzkzIiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSIzOTMiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjM5MyIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjM5MyIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSI0MTMuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iNDEzLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQxMy41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iNDEzLjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iNDM0IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSI0MzQiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQzNCIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQzNCIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSI0NTQuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iNDU0LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQ1NC41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iNDU0LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iNDc1IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSI0NzUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQ3NSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQ3NSIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSI0OTUuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iNDk1LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjQ5NS41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iNDk1LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjUyIiBjeT0iNTE2IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iNTIiIGN5PSI1MTYiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjUxNiIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjMwOCIgY3k9IjUxNiIgcj0iMiIgZmlsbD0iIzE3MjEyOSIvPg0KPGNpcmNsZSBjeD0iNTIiIGN5PSI1MzYuNSIgcj0iNC40IiBmaWxsPSIjYzdhNDVhIiBzdHJva2U9IiNlMmM5ODAiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iNTM2LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCjxjaXJjbGUgY3g9IjMwOCIgY3k9IjUzNi41IiByPSI0LjQiIGZpbGw9IiNjN2E0NWEiIHN0cm9rZT0iI2UyYzk4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGNpcmNsZSBjeD0iMzA4IiBjeT0iNTM2LjUiIHI9IjIiIGZpbGw9IiMxNzIxMjkiLz4NCgo8L3N2Zz4="
+      },
+      "pins": [
+        {
+          "id": "left-1",
+          "label": "3V3",
+          "x": 52,
+          "y": 106.0,
+          "side": "left",
+          "type": "power"
+        },
+        {
+          "id": "right-1",
+          "label": "GND",
+          "x": 308,
+          "y": 106.0,
+          "side": "right",
+          "type": "ground"
+        },
+        {
+          "id": "left-2",
+          "label": "3V3",
+          "x": 52,
+          "y": 126.5,
+          "side": "left",
+          "type": "power"
+        },
+        {
+          "id": "right-2",
+          "label": "GPIO43 TX",
+          "x": 308,
+          "y": 126.5,
+          "side": "right",
+          "type": "data"
+        },
+        {
+          "id": "left-3",
+          "label": "EN",
+          "x": 52,
+          "y": 147.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-3",
+          "label": "GPIO44 RX",
+          "x": 308,
+          "y": 147.0,
+          "side": "right",
+          "type": "data"
+        },
+        {
+          "id": "left-4",
+          "label": "GPIO4",
+          "x": 52,
+          "y": 167.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-4",
+          "label": "GPIO1",
+          "x": 308,
+          "y": 167.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-5",
+          "label": "GPIO5",
+          "x": 52,
+          "y": 188.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-5",
+          "label": "GPIO2",
+          "x": 308,
+          "y": 188.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-6",
+          "label": "GPIO6",
+          "x": 52,
+          "y": 208.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-6",
+          "label": "GPIO42",
+          "x": 308,
+          "y": 208.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-7",
+          "label": "GPIO7",
+          "x": 52,
+          "y": 229.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-7",
+          "label": "GPIO41",
+          "x": 308,
+          "y": 229.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-8",
+          "label": "GPIO15",
+          "x": 52,
+          "y": 249.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-8",
+          "label": "GPIO40",
+          "x": 308,
+          "y": 249.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-9",
+          "label": "GPIO16",
+          "x": 52,
+          "y": 270.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-9",
+          "label": "GPIO39",
+          "x": 308,
+          "y": 270.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-10",
+          "label": "GPIO17",
+          "x": 52,
+          "y": 290.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-10",
+          "label": "GPIO38",
+          "x": 308,
+          "y": 290.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-11",
+          "label": "GPIO18",
+          "x": 52,
+          "y": 311.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-11",
+          "label": "GPIO37",
+          "x": 308,
+          "y": 311.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-12",
+          "label": "GPIO8",
+          "x": 52,
+          "y": 331.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-12",
+          "label": "GPIO36",
+          "x": 308,
+          "y": 331.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-13",
+          "label": "GPIO3",
+          "x": 52,
+          "y": 352.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-13",
+          "label": "GPIO35",
+          "x": 308,
+          "y": 352.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-14",
+          "label": "GPIO46",
+          "x": 52,
+          "y": 372.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-14",
+          "label": "GPIO0",
+          "x": 308,
+          "y": 372.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-15",
+          "label": "GPIO9",
+          "x": 52,
+          "y": 393.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-15",
+          "label": "GPIO45",
+          "x": 308,
+          "y": 393.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-16",
+          "label": "GPIO10",
+          "x": 52,
+          "y": 413.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-16",
+          "label": "GPIO48",
+          "x": 308,
+          "y": 413.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-17",
+          "label": "GPIO11",
+          "x": 52,
+          "y": 434.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-17",
+          "label": "GPIO47",
+          "x": 308,
+          "y": 434.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-18",
+          "label": "GPIO12",
+          "x": 52,
+          "y": 454.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-18",
+          "label": "GPIO21",
+          "x": 308,
+          "y": 454.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-19",
+          "label": "GPIO13",
+          "x": 52,
+          "y": 475.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-19",
+          "label": "GPIO20",
+          "x": 308,
+          "y": 475.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-20",
+          "label": "GPIO14",
+          "x": 52,
+          "y": 495.5,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "right-20",
+          "label": "GPIO19",
+          "x": 308,
+          "y": 495.5,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "left-21",
+          "label": "5V",
+          "x": 52,
+          "y": 516.0,
+          "side": "left",
+          "type": "power"
+        },
+        {
+          "id": "right-21",
+          "label": "GND",
+          "x": 308,
+          "y": 516.0,
+          "side": "right",
+          "type": "ground"
+        },
+        {
+          "id": "left-22",
+          "label": "GND",
+          "x": 52,
+          "y": 536.5,
+          "side": "left",
+          "type": "ground"
+        },
+        {
+          "id": "right-22",
+          "label": "GND",
+          "x": 308,
+          "y": 536.5,
+          "side": "right",
+          "type": "ground"
+        }
+      ],
+      "info": [
+        "Power the board through one supported input at a time: USB, 5 V, or regulated 3.3 V, with GND.",
+        "GPIO signals use 3.3 V logic; do not drive GPIO pins with 5 V signals.",
+        "GPIO43 is UART0 TX and GPIO44 is UART0 RX.",
+        "GPIO19 and GPIO20 are also used for native USB D- and D+.",
+        "GPIO48 drives the onboard addressable RGB LED.",
+        "GPIO0 is the BOOT pin and EN is reset; check boot-strapping requirements before using them as general I/O."
+      ],
+      "gpioMaxInputVoltage": 3.3
+    },
+    {
+      "id": "esp32-s3-super-mini",
+      "name": "ESP32-S3 Super Mini",
+      "category": "controller",
+      "size": {
+        "width": 180,
+        "height": 235
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMjM1IiB2aWV3Qm94PSIwIDAgMTgwIDIzNSI+CiAgPHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMTU2IiBoZWlnaHQ9IjIxMSIgcng9IjkiIGZpbGw9IiMxNzJiMzQiIHN0cm9rZT0iIzA5MTcxZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTIyIDMwaDEzNk0yMiAyMDVoMTM2IiBzdHJva2U9IiMyOTQyNGIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxyZWN0IHg9IjYzIiB5PSIwIiB3aWR0aD0iNTQiIGhlaWdodD0iMjciIHJ4PSI1IiBmaWxsPSIjYWViOGJkIiBzdHJva2U9IiM2NTczN2EiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxyZWN0IHg9IjY5IiB5PSI1IiB3aWR0aD0iNDIiIGhlaWdodD0iMTYiIHJ4PSIzIiBmaWxsPSIjMjYzMjM4Ii8+CiAgPHBhdGggZD0iTTczIDIyaDM0IiBzdHJva2U9IiNkY2UxZTMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxyZWN0IHg9IjY1IiB5PSIzNyIgd2lkdGg9IjUwIiBoZWlnaHQ9IjU4IiByeD0iNCIgZmlsbD0iIzI2MzQzYSIgc3Ryb2tlPSIjODI5MTk4IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cmVjdCB4PSI3MSIgeT0iNDMiIHdpZHRoPSIzOCIgaGVpZ2h0PSI0NiIgcng9IjIiIGZpbGw9IiMxODIxMjYiIHN0cm9rZT0iIzRjNWE2MCIvPgogIDx0ZXh0IHg9IjkwIiB5PSI2MiIgZmlsbD0iI2RjZTNlNiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RVNQMzI8L3RleHQ+CiAgPHRleHQgeD0iOTAiIHk9IjczIiBmaWxsPSIjYWFiN2JjIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TMzwvdGV4dD4KICA8ZyBmaWxsPSIjYzZhNTViIj4KICAgIDxyZWN0IHg9IjY4IiB5PSIzMyIgd2lkdGg9IjQiIGhlaWdodD0iNSIvPjxyZWN0IHg9Ijc2IiB5PSIzMyIgd2lkdGg9IjQiIGhlaWdodD0iNSIvPjxyZWN0IHg9Ijg0IiB5PSIzMyIgd2lkdGg9IjQiIGhlaWdodD0iNSIvPjxyZWN0IHg9IjkyIiB5PSIzMyIgd2lkdGg9IjQiIGhlaWdodD0iNSIvPjxyZWN0IHg9IjEwMCIgeT0iMzMiIHdpZHRoPSI0IiBoZWlnaHQ9IjUiLz48cmVjdCB4PSIxMDgiIHk9IjMzIiB3aWR0aD0iNCIgaGVpZ2h0PSI1Ii8+CiAgICA8cmVjdCB4PSI2OCIgeT0iOTQiIHdpZHRoPSI0IiBoZWlnaHQ9IjUiLz48cmVjdCB4PSI3NiIgeT0iOTQiIHdpZHRoPSI0IiBoZWlnaHQ9IjUiLz48cmVjdCB4PSI4NCIgeT0iOTQiIHdpZHRoPSI0IiBoZWlnaHQ9IjUiLz48cmVjdCB4PSI5MiIgeT0iOTQiIHdpZHRoPSI0IiBoZWlnaHQ9IjUiLz48cmVjdCB4PSIxMDAiIHk9Ijk0IiB3aWR0aD0iNCIgaGVpZ2h0PSI1Ii8+PHJlY3QgeD0iMTA4IiB5PSI5NCIgd2lkdGg9IjQiIGhlaWdodD0iNSIvPgogIDwvZz4KICA8cmVjdCB4PSI3NCIgeT0iMTExIiB3aWR0aD0iMzIiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjZDhkZmUxIiBzdHJva2U9IiM2ODc3N2QiLz4KICA8dGV4dCB4PSI5MCIgeT0iMTE4IiBmaWxsPSIjNTI2MTY4IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1IiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Qk9PVDwvdGV4dD4KICA8cmVjdCB4PSI3NCIgeT0iMTI4IiB3aWR0aD0iMzIiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjZDhkZmUxIiBzdHJva2U9IiM2ODc3N2QiLz4KICA8dGV4dCB4PSI5MCIgeT0iMTM1IiBmaWxsPSIjNTI2MTY4IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1IiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UlNUPC90ZXh0PgogIDxyZWN0IHg9Ijc0IiB5PSIxNTMiIHdpZHRoPSIzMiIgaGVpZ2h0PSIyOCIgcng9IjMiIGZpbGw9IiMyNTM1M2IiIHN0cm9rZT0iIzUxNjM2YSIvPgogIDxwYXRoIGQ9Ik03OSAxNTh2MThtNi0xOHYxOG02LTE4djE4bTYtMTh2MThtNi0xOHYxOCIgc3Ryb2tlPSIjNzc4NzhjIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8cmVjdCB4PSI4MiIgeT0iMTg4IiB3aWR0aD0iMTYiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiNkN2RjZTAiIHN0cm9rZT0iIzliYTdhYyIvPgogIDx0ZXh0IHg9IjkwIiB5PSIyMDIiIGZpbGw9IiNiZGM5Y2QiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjYiIGxldHRlci1zcGFjaW5nPSIxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TMyBNSU5JPC90ZXh0PgogIDxjaXJjbGUgY3g9IjQ2IiBjeT0iMTE3IiByPSIzIiBmaWxsPSIjZTI0OTQ5Ii8+CiAgPGNpcmNsZSBjeD0iMTM0IiBjeT0iMTE3IiByPSIzIiBmaWxsPSIjNDhiNDdhIi8+CiAgPGcgZmlsbD0iI2QxYTY0YyIgc3Ryb2tlPSIjZjBkNDhjIiBzdHJva2Utd2lkdGg9IjEuNCI+CiAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjE2IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjQxLjQiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iNjYuOCIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5Mi4yIiByPSI0LjIiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjExNy42IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE0MyIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxNjguNCIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxOTMuOCIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIyMTkuMiIgcj0iNC4yIi8+CiAgICA8Y2lyY2xlIGN4PSIxNjgiIGN5PSIxNiIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTY4IiBjeT0iNDEuNCIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTY4IiBjeT0iNjYuOCIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTY4IiBjeT0iOTIuMiIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTY4IiBjeT0iMTE3LjYiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjE2OCIgY3k9IjE0MyIgcj0iNC4yIi8+PGNpcmNsZSBjeD0iMTY4IiBjeT0iMTY4LjQiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjE2OCIgY3k9IjE5My44IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIxNjgiIGN5PSIyMTkuMiIgcj0iNC4yIi8+CiAgPC9nPgo8L3N2Zz4="
+      },
+      "pins": [
+        {
+          "id": "5v",
+          "label": "5V",
+          "x": 12,
+          "y": 16.0,
+          "side": "left",
+          "type": "power"
+        },
+        {
+          "id": "tx",
+          "label": "TX",
+          "x": 168,
+          "y": 16.0,
+          "side": "right",
+          "type": "data"
+        },
+        {
+          "id": "gnd",
+          "label": "GND",
+          "x": 12,
+          "y": 41.4,
+          "side": "left",
+          "type": "ground"
+        },
+        {
+          "id": "rx",
+          "label": "RX",
+          "x": 168,
+          "y": 41.4,
+          "side": "right",
+          "type": "data"
+        },
+        {
+          "id": "3v3",
+          "label": "3V3",
+          "x": 12,
+          "y": 66.8,
+          "side": "left",
+          "type": "power"
+        },
+        {
+          "id": "io13",
+          "label": "IO13",
+          "x": 168,
+          "y": 66.8,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "io1",
+          "label": "IO1",
+          "x": 12,
+          "y": 92.19999999999999,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "io12",
+          "label": "IO12",
+          "x": 168,
+          "y": 92.19999999999999,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "io2",
+          "label": "IO2",
+          "x": 12,
+          "y": 117.6,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "io11",
+          "label": "IO11",
+          "x": 168,
+          "y": 117.6,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "io3",
+          "label": "IO3",
+          "x": 12,
+          "y": 143.0,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "io10",
+          "label": "IO10",
+          "x": 168,
+          "y": 143.0,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "io4",
+          "label": "IO4",
+          "x": 12,
+          "y": 168.39999999999998,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "io9",
+          "label": "IO9",
+          "x": 168,
+          "y": 168.39999999999998,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "io5",
+          "label": "IO5",
+          "x": 12,
+          "y": 193.79999999999998,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "io8",
+          "label": "IO8",
+          "x": 168,
+          "y": 193.79999999999998,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "io6",
+          "label": "IO6",
+          "x": 12,
+          "y": 219.2,
+          "side": "left",
+          "type": "signal"
+        },
+        {
+          "id": "io7",
+          "label": "IO7",
+          "x": 168,
+          "y": 219.2,
+          "side": "right",
+          "type": "signal"
+        }
+      ],
+      "info": [
+        "Use the 5V input or USB-C for board power; 3V3 is the regulated output. Connect GND to the shared circuit ground.",
+        "GPIO pins use 3.3 V logic. Do not connect 5 V signals directly to a GPIO.",
+        "The front 2×9 header pin order varies by clone; this definition uses 5V, GND, 3V3, IO1–IO6 on the left and TX, RX, IO13–IO7 on the right, USB end up.",
+        "Some versions expose additional GPIO pads on the underside; this drawing models the front 18-pin header only."
+      ],
+      "gpioMaxInputVoltage": 3.3
+    },
+    {
+      "id": "n20-gear-motor-100rpm",
+      "name": "N20 Micro Metal Gearmotor 100 RPM (6 V)",
+      "category": "actuator",
+      "size": {
+        "width": 360,
+        "height": 140
+      },
+      "visual": {
+        "type": "image",
+      "src": "assets/n20-illustration.svg?v=20261010-pin-align"
+      },
+      "pins": [
+        {
+          "id": "m1",
+          "label": "M1",
+          "x": 350,
+          "y": 93,
+          "side": "right",
+          "type": "other"
+        },
+        {
+          "id": "m2",
+          "label": "M2",
+          "x": 350,
+          "y": 53,
+          "side": "right",
+          "type": "other"
+        }
+      ],
+      "info": [
+        "Pololu item 2218 reference: 6 V, 298:1 gear ratio, about 100 RPM no-load speed.",
+        "No-load current is about 100 mA; extrapolated stall current is 1.6 A. Avoid stalling the motor, and size the driver for startup/stall current.",
+        "Use an H-bridge motor driver and a separate motor supply. Do not drive the motor directly from a microcontroller GPIO; share ground with the controller.",
+        "10 × 12 mm gearbox cross-section, 3 mm D-shaped output shaft, and extended rear shaft for optional encoder use."
+      ]
+    },
+    {
+      "id": "ir-obstacle-sensor",
+      "name": "IR Obstacle Avoidance Sensor",
+      "category": "sensor",
+      "size": {
+        "width": 480,
+        "height": 160
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0ODAiIGhlaWdodD0iMTYwIiB2aWV3Qm94PSIwIDAgNDgwIDE2MCI+CiAgPHBhdGggZD0iTTEwIDE5UTEwIDEwIDIwIDEwSDQ1OVE0NzAgMTAgNDcwIDIxVjEzOVE0NzAgMTUwIDQ1OSAxNTBIMjBRMTAgMTUwIDEwIDE0MFoiIGZpbGw9IiMxNjc4YjciIHN0cm9rZT0iIzBjNGY4MCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTMzIDI0aDQwNU0zMyAxMzZoNDA1IiBzdHJva2U9IiMzMzhjYzUiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPGNpcmNsZSBjeD0iNDE0IiBjeT0iNDAiIHI9IjEzIiBmaWxsPSIjMGY2MzljIiBzdHJva2U9IiM4ZGI2ZDAiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjQxNCIgY3k9IjQwIiByPSI3IiBmaWxsPSIjZGNlNWU5Ii8+CiAgPGc+CiAgICA8cmVjdCB4PSIwIiB5PSI1MCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjI4IiByeD0iMTIiIGZpbGw9IiMxNzFkMjAiIHN0cm9rZT0iIzBiMTAxMiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cmVjdCB4PSIwIiB5PSI4NiIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjI4IiByeD0iMTIiIGZpbGw9IiMxZDIzMjYiIHN0cm9rZT0iIzBiMTAxMiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8ZWxsaXBzZSBjeD0iNyIgY3k9IjY0IiByeD0iOSIgcnk9IjEzIiBmaWxsPSIjMDkwYzBlIi8+CiAgICA8ZWxsaXBzZSBjeD0iNyIgY3k9IjEwMCIgcng9IjkiIHJ5PSIxMyIgZmlsbD0iI2E5ZDhkYyIgc3Ryb2tlPSIjZWVmYmZjIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxlbGxpcHNlIGN4PSI1IiBjeT0iMTAwIiByeD0iNCIgcnk9IjgiIGZpbGw9IiNlZmZmZmYiLz4KICAgIDxwYXRoIGQ9Ik0yOCA1NHYyME0yOCA5MHYyMCIgc3Ryb2tlPSIjNDI0YzUwIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8L2c+CiAgPHJlY3QgeD0iMTExIiB5PSI0MSIgd2lkdGg9IjgzIiBoZWlnaHQ9Ijc2IiByeD0iNiIgZmlsbD0iIzA4NzBiNSIgc3Ryb2tlPSIjNzlhOWM2IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cmVjdCB4PSIxMjAiIHk9IjQ4IiB3aWR0aD0iNjUiIGhlaWdodD0iNjMiIHJ4PSI1IiBmaWxsPSIjMTc2ZGE1IiBzdHJva2U9IiMwYTRmODAiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjE1Mi41IiBjeT0iNzkuNSIgcj0iMjMiIGZpbGw9IiMxYzI3MzAiIHN0cm9rZT0iI2I3YzRjOCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMTUyLjUiIGN5PSI3OS41IiByPSIxNSIgZmlsbD0iIzQ4NTM1YSIgc3Ryb2tlPSIjMTUxZDIyIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTUyLjUgNjF2MzdNMTM0IDc5LjVoMzciIHN0cm9rZT0iI2Q3ZGFkZCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTUyLjUgNjlsNSAxMC01IDEwLTUtMTB6IiBmaWxsPSIjYWViOGJkIi8+CiAgPHRleHQgeD0iMTUyIiB5PSIxMjkiIGZpbGw9IiNlZWY3ZmIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjciIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRJU1RBTkNFPC90ZXh0PgogIDxyZWN0IHg9IjI0NSIgeT0iNTkiIHdpZHRoPSI0OCIgaGVpZ2h0PSIzOCIgcng9IjMiIGZpbGw9IiMxODFjMWUiIHN0cm9rZT0iIzA5MGQwZiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTI1MSA1NXY1bTgtNXY1bTgtNXY1bTgtNXY1bTgtNXY1bTgtNXY1TTI1MSA5N3Y1bTgtNXY1bTgtNXY1bTgtNXY1bTgtNXY1bTgtNXY1IiBzdHJva2U9IiNkMWM3YTAiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjI2OSIgeT0iODIiIGZpbGw9IiNkNWQ5ZGEiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjciIHRleHQtYW5jaG9yPSJtaWRkbGUiPkxNMzkzPC90ZXh0PgogIDxnPgogICAgPHJlY3QgeD0iMjExIiB5PSIzNyIgd2lkdGg9IjIzIiBoZWlnaHQ9IjEyIiByeD0iMiIgZmlsbD0iIzIyMmEyZSIgc3Ryb2tlPSIjZDdkYWRkIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPHJlY3QgeD0iMjE0IiB5PSI0MCIgd2lkdGg9IjE3IiBoZWlnaHQ9IjYiIGZpbGw9IiNmM2Y0ZWMiLz4KICAgIDxyZWN0IHg9IjIxMSIgeT0iMTA4IiB3aWR0aD0iMjMiIGhlaWdodD0iMTIiIHJ4PSIyIiBmaWxsPSIjMjIyYTJlIiBzdHJva2U9IiNkN2RhZGQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8cmVjdCB4PSIyMTQiIHk9IjExMSIgd2lkdGg9IjE3IiBoZWlnaHQ9IjYiIGZpbGw9IiNmM2Y0ZWMiLz4KICAgIDxyZWN0IHg9IjMxMCIgeT0iMzkiIHdpZHRoPSIyNCIgaGVpZ2h0PSIxMiIgcng9IjIiIGZpbGw9IiMyMDI4MmMiIHN0cm9rZT0iI2QyZDhkYSIvPgogICAgPHJlY3QgeD0iMzEzIiB5PSI0MiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjYiIGZpbGw9IiNkOGQyYWQiLz4KICAgIDxyZWN0IHg9IjMxMCIgeT0iMTA5IiB3aWR0aD0iMjQiIGhlaWdodD0iMTIiIHJ4PSIyIiBmaWxsPSIjMjAyODJjIiBzdHJva2U9IiNkMmQ4ZGEiLz4KICAgIDxyZWN0IHg9IjMxMyIgeT0iMTEyIiB3aWR0aD0iMTgiIGhlaWdodD0iNiIgZmlsbD0iI2Q4ZDJhZCIvPgogICAgPHJlY3QgeD0iMzQ0IiB5PSIzOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjEyIiByeD0iMiIgZmlsbD0iIzIwMjgyYyIgc3Ryb2tlPSIjZDJkOGRhIi8+CiAgICA8cmVjdCB4PSIzNDciIHk9IjQyIiB3aWR0aD0iMTgiIGhlaWdodD0iNiIgZmlsbD0iI2Q4ZDJhZCIvPgogICAgPHJlY3QgeD0iMzQ0IiB5PSIxMDkiIHdpZHRoPSIyNCIgaGVpZ2h0PSIxMiIgcng9IjIiIGZpbGw9IiMyMDI4MmMiIHN0cm9rZT0iI2QyZDhkYSIvPgogICAgPHJlY3QgeD0iMzQ3IiB5PSIxMTIiIHdpZHRoPSIxOCIgaGVpZ2h0PSI2IiBmaWxsPSIjZDhkMmFkIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjMzMCIgeT0iODMiIGZpbGw9IiNlN2Y0ZjkiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JUiBTRU5TT1I8L3RleHQ+CiAgPHJlY3QgeD0iNDMxIiB5PSIzNCIgd2lkdGg9IjMzIiBoZWlnaHQ9IjkyIiByeD0iMyIgZmlsbD0iIzExMTkxZCIgc3Ryb2tlPSIjMDgwZDEwIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8ZyBmaWxsPSIjYjhjNGM4IiBzdHJva2U9IiNmMmY0ZjUiIHN0cm9rZS13aWR0aD0iMiI+CiAgICA8Y2lyY2xlIGN4PSI0NTkiIGN5PSI1MCIgcj0iNS41Ii8+PGNpcmNsZSBjeD0iNDU5IiBjeT0iODAiIHI9IjUuNSIvPjxjaXJjbGUgY3g9IjQ1OSIgY3k9IjExMCIgcj0iNS41Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjciIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0iZW5kIj4KICAgIDx0ZXh0IHg9IjQ1MCIgeT0iNTIiPk9VVDwvdGV4dD48dGV4dCB4PSI0NTAiIHk9IjgyIj5HTkQ8L3RleHQ+PHRleHQgeD0iNDUwIiB5PSIxMTIiPlZDQzwvdGV4dD4KICA8L2c+Cjwvc3ZnPg=="
+      },
+      "pins": [
+        {
+          "id": "out",
+          "label": "OUT",
+          "x": 459,
+          "y": 50,
+          "side": "right",
+          "type": "signal"
+        },
+        {
+          "id": "gnd",
+          "label": "GND",
+          "x": 459,
+          "y": 80,
+          "side": "right",
+          "type": "ground"
+        },
+        {
+          "id": "vcc",
+          "label": "VCC",
+          "x": 459,
+          "y": 110,
+          "side": "right",
+          "type": "power"
+        }
+      ],
+      "info": [
+        "Power VCC from 3.3–5 V and connect GND to the controller ground.",
+        "OUT is a digital active-low signal: it goes LOW when reflected IR indicates an obstacle.",
+        "Use the blue potentiometer to adjust sensitivity/detection range; actual range varies with the module and target surface.",
+        "If powering the module from 5 V, verify OUT voltage is safe for a 3.3 V controller input."
+      ]
+    },
+    {
+      "id": "oled-096-i2c-blue",
+      "name": "0.96 inch I2C OLED Display (Blue)",
+      "category": "display",
+      "size": {
+        "width": 230,
+        "height": 260
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22230%22%20height%3D%22260%22%20viewBox%3D%220%200%20230%20260%22%3E%0A%3Crect%20x%3D%225%22%20y%3D%225%22%20width%3D%22220%22%20height%3D%22220%22%20rx%3D%228%22%20fill%3D%22%2317699f%22%20stroke%3D%22%230b3d5c%22%20stroke-width%3D%223%22%2F%3E%0A%3Ccircle%20cx%3D%2219%22%20cy%3D%2219%22%20r%3D%226%22%20fill%3D%22%23d7e0e4%22%20stroke%3D%22%23f4f6f7%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%22211%22%20cy%3D%2219%22%20r%3D%226%22%20fill%3D%22%23d7e0e4%22%20stroke%3D%22%23f4f6f7%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%22211%22%20r%3D%226%22%20fill%3D%22%23d7e0e4%22%20stroke%3D%22%23f4f6f7%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%22211%22%20cy%3D%22211%22%20r%3D%226%22%20fill%3D%22%23d7e0e4%22%20stroke%3D%22%23f4f6f7%22%20stroke-width%3D%223%22%2F%3E%0A%3Crect%20x%3D%2234%22%20y%3D%2237%22%20width%3D%22162%22%20height%3D%22126%22%20rx%3D%228%22%20fill%3D%22%23c9d2d6%22%20stroke%3D%22%23819097%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2241%22%20y%3D%2244%22%20width%3D%22148%22%20height%3D%22112%22%20rx%3D%224%22%20fill%3D%22%2305090d%22%20stroke%3D%22%231c2b33%22%20stroke-width%3D%222%22%2F%3E%0A%3Cg%20fill%3D%22%2335a9d5%22%3E%3Crect%20x%3D%2255%22%20y%3D%2260%22%20width%3D%2234%22%20height%3D%225%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2295%22%20y%3D%2260%22%20width%3D%2223%22%20height%3D%225%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2255%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%2266%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%2277%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%2288%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%2299%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%22110%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%22121%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%22132%22%20y%3D%2276%22%20width%3D%225%22%20height%3D%2222%22%2F%3E%3Crect%20x%3D%2255%22%20y%3D%22111%22%20width%3D%2262%22%20height%3D%225%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2255%22%20y%3D%22127%22%20width%3D%2294%22%20height%3D%225%22%20rx%3D%222%22%2F%3E%3C%2Fg%3E%0A%3Ctext%20x%3D%22115%22%20y%3D%22185%22%20text-anchor%3D%22middle%22%20fill%3D%22%23dcecf2%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20letter-spacing%3D%221%22%3E128%20%C3%97%2064%20OLED%3C%2Ftext%3E%0A%3Cg%20stroke%3D%22%23c1c9cc%22%20stroke-width%3D%224%22%3E%3Cpath%20d%3D%22M85%20225v21M105%20225v21M125%20225v21M145%20225v21%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23d6ac58%22%20stroke%3D%22%23fff0bf%22%20stroke-width%3D%221.5%22%3E%3Ccircle%20cx%3D%2285%22%20cy%3D%22246%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%22246%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22125%22%20cy%3D%22246%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22145%22%20cy%3D%22246%22%20r%3D%225%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E"
+      },
+      "pins": [
+        {
+          "id": "vcc",
+          "label": "VCC",
+          "x": 85,
+          "y": 246,
+          "side": "bottom",
+          "type": "power"
+        },
+        {
+          "id": "gnd",
+          "label": "GND",
+          "x": 105,
+          "y": 246,
+          "side": "bottom",
+          "type": "ground"
+        },
+        {
+          "id": "scl",
+          "label": "SCL",
+          "x": 125,
+          "y": 246,
+          "side": "bottom",
+          "type": "data"
+        },
+        {
+          "id": "sda",
+          "label": "SDA",
+          "x": 145,
+          "y": 246,
+          "side": "bottom",
+          "type": "data"
+        }
+      ],
+      "info": [
+        "0.96 inch, 128 × 64 blue OLED module with SSD1306-compatible I²C interface.",
+        "This reference module uses VCC, GND, SCL, SDA in that order; some visually similar boards reverse VCC/GND or use a different order, so check the silkscreen on your board.",
+        "The referenced module accepts 3.3–5 V power. I²C address is commonly 0x3C, but clones may differ."
+      ]
+    },
+    {
+      "id": "tb6612fng-dual-motor-driver",
+      "name": "Motor Driver - Dual TB6612FNG (1A)",
+      "category": "motor driver",
+      "size": {
+        "width": 260,
+        "height": 300
+      },
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22260%22%20height%3D%22300%22%20viewBox%3D%220%200%20260%20300%22%3E%0A%3Crect%20x%3D%229%22%20y%3D%2229%22%20width%3D%22242%22%20height%3D%22242%22%20rx%3D%228%22%20fill%3D%22%23c93432%22%20stroke%3D%22%2381221f%22%20stroke-width%3D%223%22%2F%3E%0A%3Ccircle%20cx%3D%2222%22%20cy%3D%2242%22%20r%3D%226%22%20fill%3D%22%23d9ad55%22%2F%3E%3Ccircle%20cx%3D%22238%22%20cy%3D%2242%22%20r%3D%226%22%20fill%3D%22%23d9ad55%22%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%22258%22%20r%3D%226%22%20fill%3D%22%23d9ad55%22%2F%3E%3Ccircle%20cx%3D%22238%22%20cy%3D%22258%22%20r%3D%226%22%20fill%3D%22%23d9ad55%22%2F%3E%0A%3Crect%20x%3D%2279%22%20y%3D%2293%22%20width%3D%22102%22%20height%3D%2291%22%20rx%3D%227%22%20fill%3D%22%2322272b%22%20stroke%3D%22%23101315%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M92%20108h76M92%20169h76%22%20stroke%3D%22%23343a3e%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22130%22%20y%3D%22137%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e5e7e8%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2213%22%20font-weight%3D%22bold%22%3ETB6612%3C%2Ftext%3E%3Ctext%20x%3D%22130%22%20y%3D%22157%22%20text-anchor%3D%22middle%22%20fill%3D%22%23d2d7d9%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22bold%22%3EFNG%3C%2Ftext%3E%0A%3Crect%20x%3D%2248%22%20y%3D%2257%22%20width%3D%2236%22%20height%3D%2227%22%20rx%3D%224%22%20fill%3D%22%23c9c6bc%22%20stroke%3D%22%23827e74%22%20stroke-width%3D%222%22%2F%3E%3Crect%20x%3D%22176%22%20y%3D%2257%22%20width%3D%2236%22%20height%3D%2227%22%20rx%3D%224%22%20fill%3D%22%23c9c6bc%22%20stroke%3D%22%23827e74%22%20stroke-width%3D%222%22%2F%3E%3Crect%20x%3D%2297%22%20y%3D%22195%22%20width%3D%2266%22%20height%3D%2231%22%20rx%3D%226%22%20fill%3D%22%23d1ccc1%22%20stroke%3D%22%23858075%22%20stroke-width%3D%222%22%2F%3E%0A%3Ctext%20x%3D%22130%22%20y%3D%22246%22%20text-anchor%3D%22middle%22%20fill%3D%22%23fff0da%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22bold%22%20letter-spacing%3D%221%22%3EDUAL%20H-BRIDGE%3C%2Ftext%3E%0A%3Cg%20stroke%3D%22%23b9c1c3%22%20stroke-width%3D%224%22%3E%3Cpath%20d%3D%22M28%209v20M57%209v20M86%209v20M115%209v20M144%209v20M173%209v20M202%209v20M231%209v20%22%2F%3E%3Cpath%20d%3D%22M28%20271v20M57%20271v20M86%20271v20M115%20271v20M144%20271v20M173%20271v20M202%20271v20M231%20271v20%22%2F%3E%3C%2Fg%3E%0A%3Cg%20fill%3D%22%23dfb65a%22%20stroke%3D%22%23fff0bd%22%20stroke-width%3D%221.2%22%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%2257%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%2286%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22115%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22144%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22173%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22202%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22231%22%20cy%3D%2210%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%2257%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%2286%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22115%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22144%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22173%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22202%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3Ccircle%20cx%3D%22231%22%20cy%3D%22290%22%20r%3D%225%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E"
+      },
+      "pins": [
+        {
+          "id": "pwma",
+          "label": "PWMA",
+          "x": 28,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "ain1",
+          "label": "AIN1",
+          "x": 57,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "ain2",
+          "label": "AIN2",
+          "x": 86,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "stby",
+          "label": "STBY",
+          "x": 115,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "bin1",
+          "label": "BIN1",
+          "x": 144,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "bin2",
+          "label": "BIN2",
+          "x": 173,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "pwmb",
+          "label": "PWMB",
+          "x": 202,
+          "y": 10,
+          "side": "top",
+          "type": "data"
+        },
+        {
+          "id": "gnd-logic",
+          "label": "GND",
+          "x": 231,
+          "y": 10,
+          "side": "top",
+          "type": "ground"
+        },
+        {
+          "id": "vm",
+          "label": "VM",
+          "x": 28,
+          "y": 290,
+          "side": "bottom",
+          "type": "power"
+        },
+        {
+          "id": "vcc",
+          "label": "VCC",
+          "x": 57,
+          "y": 290,
+          "side": "bottom",
+          "type": "power"
+        },
+        {
+          "id": "gnd-motor",
+          "label": "GND",
+          "x": 86,
+          "y": 290,
+          "side": "bottom",
+          "type": "ground"
+        },
+        {
+          "id": "ao1",
+          "label": "AO1",
+          "x": 115,
+          "y": 290,
+          "side": "bottom",
+          "type": "other"
+        },
+        {
+          "id": "ao2",
+          "label": "AO2",
+          "x": 144,
+          "y": 290,
+          "side": "bottom",
+          "type": "other"
+        },
+        {
+          "id": "bo2",
+          "label": "BO2",
+          "x": 173,
+          "y": 290,
+          "side": "bottom",
+          "type": "other"
+        },
+        {
+          "id": "bo1",
+          "label": "BO1",
+          "x": 202,
+          "y": 290,
+          "side": "bottom",
+          "type": "other"
+        },
+        {
+          "id": "gnd-output",
+          "label": "GND",
+          "x": 231,
+          "y": 290,
+          "side": "bottom",
+          "type": "ground"
+        }
+      ],
+      "info": [
+        "SparkFun ROB-14451 style breakout with separate logic supply (VCC) and motor supply (VM).",
+        "Logic supply is 2.7–5.5 V; motor supply is up to 15 V. Pull STBY high to enable the driver.",
+        "Rated about 1.2 A average per channel and 3.2 A peak. Peak is brief; check motor stall current and driver cooling.",
+        "Connect controller ground, driver ground, and motor-supply ground together. Do not connect AO1/AO2/BO1/BO2 directly to GPIO."
+      ]
+    },
+    {
+      "id": "gy-521-mpu6050",
+      "pins": [
+        {
+          "id": "vcc",
+          "type": "power",
+          "side": "bottom",
+          "x": 44,
+          "label": "VCC",
+          "y": 178
+        },
+        {
+          "id": "gnd",
+          "type": "ground",
+          "side": "bottom",
+          "x": 68,
+          "label": "GND",
+          "y": 178
+        },
+        {
+          "id": "scl",
+          "type": "data",
+          "side": "bottom",
+          "x": 92,
+          "label": "SCL",
+          "y": 178
+        },
+        {
+          "id": "sda",
+          "type": "data",
+          "side": "bottom",
+          "x": 116,
+          "label": "SDA",
+          "y": 178
+        },
+        {
+          "id": "xda",
+          "type": "data",
+          "side": "bottom",
+          "x": 140,
+          "label": "XDA",
+          "y": 178
+        },
+        {
+          "id": "xcl",
+          "type": "data",
+          "side": "bottom",
+          "x": 164,
+          "label": "XCL",
+          "y": 178
+        },
+        {
+          "id": "ad0",
+          "type": "signal",
+          "side": "bottom",
+          "x": 188,
+          "label": "AD0",
+          "y": 178
+        },
+        {
+          "id": "int",
+          "type": "signal",
+          "side": "bottom",
+          "x": 212,
+          "label": "INT",
+          "y": 178
+        }
+      ],
+      "category": "sensor",
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22260%22%20height%3D%22190%22%20viewBox%3D%220%200%20260%20190%22%3E%3Crect%20x%3D%2228%22%20y%3D%2218%22%20width%3D%22204%22%20height%3D%22150%22%20rx%3D%228%22%20fill%3D%22%23176aa0%22%20stroke%3D%22%23104d77%22%20stroke-width%3D%224%22%2F%3E%3Ccircle%20cx%3D%2243%22%20cy%3D%2233%22%20r%3D%227%22%20fill%3D%22%23dfe8eb%22%20stroke%3D%22%239aa9ad%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%22217%22%20cy%3D%2233%22%20r%3D%227%22%20fill%3D%22%23dfe8eb%22%20stroke%3D%22%239aa9ad%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%2243%22%20cy%3D%22153%22%20r%3D%227%22%20fill%3D%22%23dfe8eb%22%20stroke%3D%22%239aa9ad%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%22217%22%20cy%3D%22153%22%20r%3D%227%22%20fill%3D%22%23dfe8eb%22%20stroke%3D%22%239aa9ad%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2286%22%20y%3D%2260%22%20width%3D%2288%22%20height%3D%2268%22%20rx%3D%225%22%20fill%3D%22%23202c33%22%20stroke%3D%22%230c2939%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M94%2070h72M94%2078h72%22%20stroke%3D%22%2335454d%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%22188%22%20y%3D%2255%22%20width%3D%2216%22%20height%3D%2230%22%20rx%3D%223%22%20fill%3D%22%23ddd7bc%22%20stroke%3D%22%238b8269%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%2276%22%20cy%3D%22138%22%20r%3D%225%22%20fill%3D%22%23dfc44f%22%2F%3E%3Crect%20x%3D%2242%22%20y%3D%22174%22%20width%3D%22176%22%20height%3D%227%22%20rx%3D%222%22%20fill%3D%22%23d0d9d9%22%2F%3E%3C%2Fsvg%3E"
+      },
+      "size": {
+        "width": 260,
+        "height": 190
+      },
+      "info": [
+        "The breakout combines a 3-axis accelerometer and 3-axis gyroscope; communicate over I²C.",
+        "VCC is typically 3.3–5 V on GY-521 boards, but the MPU-6050 signal pins use 3.3 V logic. Check your board revision before using 5 V logic.",
+        "I²C address defaults to 0x68; set AD0 high to use 0x69. INT is an optional interrupt output."
+      ],
+      "name": "GY-521 MPU-6050 6-DOF IMU"
+    },
+    {
+      "id": "arduino-nano-classic",
+      "pins": [
+        {
+          "id": "left-d13",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "D13",
+          "y": 42
+        },
+        {
+          "id": "right-d12",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D12",
+          "y": 42
+        },
+        {
+          "id": "left-3v3",
+          "type": "power",
+          "side": "left",
+          "x": 32,
+          "label": "3V3",
+          "y": 62
+        },
+        {
+          "id": "right-d11",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D11",
+          "y": 62
+        },
+        {
+          "id": "left-aref",
+          "type": "power",
+          "side": "left",
+          "x": 32,
+          "label": "AREF",
+          "y": 82
+        },
+        {
+          "id": "right-d10",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D10",
+          "y": 82
+        },
+        {
+          "id": "left-a0",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A0",
+          "y": 102
+        },
+        {
+          "id": "right-d9",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D9",
+          "y": 102
+        },
+        {
+          "id": "left-a1",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A1",
+          "y": 122
+        },
+        {
+          "id": "right-d8",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D8",
+          "y": 122
+        },
+        {
+          "id": "left-a2",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A2",
+          "y": 142
+        },
+        {
+          "id": "right-d7",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D7",
+          "y": 142
+        },
+        {
+          "id": "left-a3",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A3",
+          "y": 162
+        },
+        {
+          "id": "right-d6",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D6",
+          "y": 162
+        },
+        {
+          "id": "left-a4",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A4",
+          "y": 182
+        },
+        {
+          "id": "right-d5",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D5",
+          "y": 182
+        },
+        {
+          "id": "left-a5",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A5",
+          "y": 202
+        },
+        {
+          "id": "right-d4",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D4",
+          "y": 202
+        },
+        {
+          "id": "left-a6",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A6",
+          "y": 222
+        },
+        {
+          "id": "right-d3",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D3",
+          "y": 222
+        },
+        {
+          "id": "left-a7",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "A7",
+          "y": 242
+        },
+        {
+          "id": "right-d2",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "D2",
+          "y": 242
+        },
+        {
+          "id": "left-5v",
+          "type": "power",
+          "side": "left",
+          "x": 32,
+          "label": "5V",
+          "y": 262
+        },
+        {
+          "id": "right-gnd",
+          "type": "ground",
+          "side": "right",
+          "x": 168,
+          "label": "GND",
+          "y": 262
+        },
+        {
+          "id": "left-rst",
+          "type": "signal",
+          "side": "left",
+          "x": 32,
+          "label": "RST",
+          "y": 282
+        },
+        {
+          "id": "right-rst",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "RST",
+          "y": 282
+        },
+        {
+          "id": "left-gnd",
+          "type": "ground",
+          "side": "left",
+          "x": 32,
+          "label": "GND",
+          "y": 302
+        },
+        {
+          "id": "right-rx0",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "RX0",
+          "y": 302
+        },
+        {
+          "id": "left-vin",
+          "type": "power",
+          "side": "left",
+          "x": 32,
+          "label": "VIN",
+          "y": 322
+        },
+        {
+          "id": "right-tx1",
+          "type": "signal",
+          "side": "right",
+          "x": 168,
+          "label": "TX1",
+          "y": 322
+        }
+      ],
+      "category": "controller",
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22360%22%20viewBox%3D%220%200%20200%20360%22%3E%3Crect%20x%3D%2219%22%20y%3D%2214%22%20width%3D%22162%22%20height%3D%22332%22%20rx%3D%229%22%20fill%3D%22%23087bad%22%20stroke%3D%22%2307577b%22%20stroke-width%3D%224%22%2F%3E%3Crect%20x%3D%2266%22%20y%3D%222%22%20width%3D%2268%22%20height%3D%2230%22%20rx%3D%224%22%20fill%3D%22%23c5cdd0%22%20stroke%3D%22%2368757b%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2274%22%20y%3D%227%22%20width%3D%2252%22%20height%3D%2220%22%20rx%3D%222%22%20fill%3D%22%23263238%22%2F%3E%3Crect%20x%3D%2255%22%20y%3D%2291%22%20width%3D%2290%22%20height%3D%2269%22%20rx%3D%224%22%20fill%3D%22%23202b31%22%20stroke%3D%22%23111b20%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M62%20101h76M62%20109h76%22%20stroke%3D%22%233e4b50%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2269%22%20y%3D%22191%22%20width%3D%2262%22%20height%3D%2247%22%20rx%3D%224%22%20fill%3D%22%2318262d%22%2F%3E%3Crect%20x%3D%22143%22%20y%3D%22250%22%20width%3D%2218%22%20height%3D%2226%22%20rx%3D%223%22%20fill%3D%22%23d9d8ce%22%20stroke%3D%22%238c8c83%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2252%22%20r%3D%225%22%20fill%3D%22%23e8da56%22%2F%3E%3Ccircle%20cx%3D%22145%22%20cy%3D%2252%22%20r%3D%225%22%20fill%3D%22%23e25b4b%22%2F%3E%3Cpath%20d%3D%22M31%2042h11M31%2062h11M31%2082h11M31%20102h11M31%20122h11M31%20142h11M31%20162h11M31%20182h11M31%20202h11M31%20222h11M31%20242h11M31%20262h11M31%20282h11M31%20302h11M31%20322h11M158%2042h11M158%2062h11M158%2082h11M158%20102h11M158%20122h11M158%20142h11M158%20162h11M158%20182h11M158%20202h11M158%20222h11M158%20242h11M158%20262h11M158%20282h11M158%20302h11M158%20322h11%22%20stroke%3D%22%23d6b453%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22286%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23d9edf2%22%3ENANO%3C%2Ftext%3E%3Ctext%20x%3D%22100%22%20y%3D%22304%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%229%22%20fill%3D%22%23c2e0e9%22%3EATmega328P%3C%2Ftext%3E%3C%2Fsvg%3E"
+      },
+      "size": {
+        "width": 200,
+        "height": 360
+      },
+      "info": [
+        "Classic 5 V, 16 MHz Nano with ATmega328P; board revisions and clones may use different USB connectors or chips.",
+        "Use a regulated 5 V supply on the 5V pin, or a suitable higher input through VIN. One 3.7 V cell is too low for VIN.",
+        "Digital pins D3, D5, D6, D9, D10, and D11 support PWM. A4/A5 are the usual I²C SDA/SCL pins."
+      ],
+      "name": "Arduino Nano (ATmega328P)"
+    },
+    {
+      "category": "passive",
+      "size": {
+        "width": 160,
+        "height": 60
+      },
+      "id": "resistor-variable",
+      "info": [
+        "Default value is 220 Ω (red-red-brown-gold bands). Double-click a placed resistor to enter another value; its bands update automatically.",
+        "Use the resistor as a passive two-terminal part. The color bands show the nearest standard four-band code for the entered resistance."
+      ],
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%2260%22%20viewBox%3D%220%200%20160%2060%22%3E%3Cpath%20d%3D%22M2%2030h47M111%2030h47%22%20stroke%3D%22%23aeb7bd%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3Crect%20x%3D%2247%22%20y%3D%2215%22%20width%3D%2266%22%20height%3D%2230%22%20rx%3D%2214%22%20fill%3D%22%23dfc79d%22%20stroke%3D%22%238a7655%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M55%2020h50%22%20stroke%3D%22%23f1e4c9%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+      },
+      "name": "Resistor (editable value)",
+      "defaultResistanceOhms": 220,
+      "pins": [
+        {
+          "id": "a",
+          "type": "other",
+          "side": "left",
+          "x": 2,
+          "label": "A",
+          "y": 30
+        },
+        {
+          "id": "b",
+          "type": "other",
+          "side": "right",
+          "x": 158,
+          "label": "B",
+          "y": 30
+        }
+      ]
+    },
+    {
+      "id": "li-ion-18650-3v7",
+      "pins": [
+        {
+          "id": "positive",
+          "type": "power",
+          "side": "left",
+          "x": 5,
+          "label": "+",
+          "y": 50
+        },
+        {
+          "id": "negative",
+          "type": "ground",
+          "side": "right",
+          "x": 245,
+          "label": "−",
+          "y": 50
+        }
+      ],
+      "category": "power",
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22250%22%20height%3D%22100%22%20viewBox%3D%220%200%20250%20100%22%3E%3Crect%20x%3D%2217%22%20y%3D%2217%22%20width%3D%22216%22%20height%3D%2266%22%20rx%3D%2232%22%20fill%3D%22%232877b9%22%20stroke%3D%22%23174f80%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M44%2020v60M205%2020v60%22%20stroke%3D%22%234b91c9%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2229%22%20width%3D%2218%22%20height%3D%2242%22%20rx%3D%228%22%20fill%3D%22%23c9cfd2%22%20stroke%3D%22%237d888d%22%20stroke-width%3D%222%22%2F%3E%3Crect%20x%3D%22228%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23aeb8bc%22%20stroke%3D%22%236f7c82%22%20stroke-width%3D%222%22%2F%3E%3Crect%20x%3D%22233%22%20y%3D%2237%22%20width%3D%2212%22%20height%3D%2226%22%20rx%3D%225%22%20fill%3D%22%23dce0e1%22%2F%3E%3Ctext%20x%3D%22125%22%20y%3D%2257%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%20fill%3D%22%23f3f7fa%22%3E3.7%20V%20Li-ion%3C%2Ftext%3E%3C%2Fsvg%3E"
+      },
+      "size": {
+        "width": 250,
+        "height": 100
+      },
+      "info": [
+        "3.6–3.7 V is nominal; a typical cell reaches 4.2 V when fully charged. Exact capacity and safe discharge current depend on the cell model.",
+        "Use a proper Li-ion charger and protection. A single cell cannot directly power a 4.8–6 V SG90 servo or the Nano VIN pin; use an appropriate regulator and share ground."
+      ],
+      "name": "18650 Li-ion Cell (3.7 V)"
+    },
+    {
+      "id": "servo-sg90",
+      "pins": [
+        {
+          "id": "gnd",
+          "type": "ground",
+          "side": "bottom",
+          "x": 61,
+          "label": "GND",
+          "y": 216
+        },
+        {
+          "id": "vcc",
+          "type": "power",
+          "side": "bottom",
+          "x": 105,
+          "label": "VCC",
+          "y": 216
+        },
+        {
+          "id": "signal",
+          "type": "signal",
+          "side": "bottom",
+          "x": 149,
+          "label": "SIG",
+          "y": 216
+        }
+      ],
+      "category": "actuator",
+      "visual": {
+        "type": "image",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22210%22%20height%3D%22230%22%20viewBox%3D%220%200%20210%20230%22%3E%3Cpath%20d%3D%22M76%20148C72%20174%2064%20194%2061%20216%22%20stroke%3D%22%236a4937%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M105%20148v68%22%20stroke%3D%22%23d64545%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M134%20148c3%2026%2011%2046%2015%2068%22%20stroke%3D%22%23ef8a34%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M26%2042h34v24H26zM150%2042h34v24h-34zM26%20119h34v24H26zM150%20119h34v24h-34z%22%20fill%3D%22%232d8db4%22%20stroke%3D%22%2317627f%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2239%22%20y%3D%2236%22%20width%3D%22132%22%20height%3D%22115%22%20rx%3D%2212%22%20fill%3D%22%232383aa%22%20stroke%3D%22%23155d7b%22%20stroke-width%3D%224%22%2F%3E%3Crect%20x%3D%2254%22%20y%3D%2261%22%20width%3D%22102%22%20height%3D%2270%22%20rx%3D%229%22%20fill%3D%22%23287fa1%22%20stroke%3D%22%231a617f%22%20stroke-width%3D%223%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%2253%22%20r%3D%229%22%20fill%3D%22%23dfe5e6%22%20stroke%3D%22%238b9699%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2296%22%20y%3D%2218%22%20width%3D%2218%22%20height%3D%2244%22%20rx%3D%225%22%20fill%3D%22%23f3f3ed%22%20stroke%3D%22%23aeb5b5%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%2272%22%20y%3D%2219%22%20width%3D%2266%22%20height%3D%2213%22%20rx%3D%226%22%20fill%3D%22%23f3f3ed%22%20stroke%3D%22%23aeb5b5%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22105%22%20y%3D%22105%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23d9edf2%22%3ESG90%3C%2Ftext%3E%3Ccircle%20cx%3D%2261%22%20cy%3D%22216%22%20r%3D%224%22%20fill%3D%22%236a4937%22%2F%3E%3Ccircle%20cx%3D%22105%22%20cy%3D%22216%22%20r%3D%224%22%20fill%3D%22%23d64545%22%2F%3E%3Ccircle%20cx%3D%22149%22%20cy%3D%22216%22%20r%3D%224%22%20fill%3D%22%23ef8a34%22%2F%3E%3C%2Fsvg%3E"
+      },
+      "size": {
+        "width": 210,
+        "height": 230
+      },
+      "info": [
+        "Typical SG90 operating range is 4.8–6 V; use a regulated supply capable of handling startup and stall current.",
+        "Brown is GND, red is power, and orange/yellow is the control signal. Wire colors can vary by clone.",
+        "Do not power a loaded servo from a Nano GPIO pin. Share ground between the servo supply and controller."
+      ],
+      "name": "SG90 9 g Micro Servo"
+    }
+  ],
+  "schemaVersion": 1
+}
